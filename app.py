@@ -20,15 +20,15 @@ if __name__ == '__main__':
 
 
 # Waitress (remember to include the waitress server in "install_requires" in the setup.py)
-    from waitress import serve
-    print("Starting Waitress Server on http://{0}:{1}".format(ip, port))
-    serve(app, host=ip, port=port, threads=50)
+#     from waitress import serve
+#     print("Starting Waitress Server on http://{0}:{1}".format(ip, port))
+#     serve(app, host=ip, port=port, threads=50)
 
 #Simple Server
-    # from wsgiref.simple_server import make_server
-    # print("Starting Simple Server on http://{0}:{1}".format(ip, port))
-    # server = make_server(ip, port, app)
-    # server.serve_forever()
+    from wsgiref.simple_server import make_server
+    print("Starting Simple Server on http://{0}:{1}".format(ip, port))
+    server = make_server(ip, port, app)
+    server.serve_forever()
 
 # Cherrypy server (remember to include the cherrypy server in "install_requires" in the setup.py)
 #     from cherrypy import wsgiserver

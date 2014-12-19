@@ -4,6 +4,7 @@ from pyramid.paster import get_app
 from pyramid.paster import get_appsettings
 
 
+
 if __name__ == '__main__':
     here = os.path.dirname(os.path.abspath(__file__))
 

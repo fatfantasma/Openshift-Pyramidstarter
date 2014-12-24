@@ -1,14 +1,14 @@
 from pyramid.config import Configurator
 import logging
 
-log = logging.getLogger(__name__)
 
 def main(global_config, **settings):
     """ This function returns a Pyramid WSGI application.
     """
 
-
     config_logging()
+
+    log = logging.getLogger(__name__)
 
     log.debug("This is a log.debug test")
     log.info("This is a log.info test")
@@ -31,7 +31,7 @@ def config_logging():
 
     log_ini = {
         "version": 1,
-        "disable_existing_loggers": True,
+        "disable_existing_loggers": False,
         "formatters": {
             "simple": {
                 "format": "%(asctime)s [%(levelname)-8s] %(name)s: %(message)s",

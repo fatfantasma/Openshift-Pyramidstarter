@@ -8,13 +8,7 @@ def main(global_config, **settings):
 
     config_logging()
 
-    log = logging.getLogger(__name__)
 
-    log.debug("This is a log.debug test")
-    log.info("This is a log.info test")
-    log.warn("This is a log.warn test")
-    log.error("This is a log.error test")
-    log.critical("This is a log.critical test")
 
     config = Configurator(settings=settings)
     config.include('pyramid_chameleon')

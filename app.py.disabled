@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # server.serve_forever()
 
 #Running 'production.ini' method manually.  I find this method the least compatible with Openshift since you can't
-#easily start/stop/restart your app with the 'rhc' commands. Mabye somebody can suggest a better way :)
+#easily start/stop/restart your app with the 'rhc' commands. Maybe somebody can suggest a better way :)
 
 # #Don't forget to set the Host IP in 'production.ini'.  Use 8080 for the port for Openshift
 # You will need to use the 'pre_build' action hook(pkill python) so it stops the existing running instance of the server on OS
